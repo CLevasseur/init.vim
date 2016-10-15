@@ -16,7 +16,13 @@ https://github.com/neovim/neovim/wiki/Installing-Neovim
   pip3 install neovim  # python 3.X
   ```
 
-4. Powerline fonts are available at https://github.com/powerline/fonts
+4. Install plugins
+  ```
+  $ vim
+  :PlugInstall
+  ```
+
+5. Powerline fonts used by `vim-airline` plugin are available at https://github.com/powerline/fonts
 
 # Plugins installed
 ```
