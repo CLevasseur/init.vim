@@ -25,7 +25,7 @@ https://github.com/neovim/neovim/wiki/Installing-Neovim
 5. Copy solarized colorscheme to `colors` folder: 
   ```
   mkdir ~/.config/nvim/colors/
-  cp ~/.config/nvim/plugged/vim-colors-solarized/colors/* ~/.config/nvim/colors/
+  ln -s ~/.config/nvim/colors/solarized.vim ~/.config/nvim/plugged/vim-colors-solarized/colors/
   ```  
 
 5. Powerline fonts used by `vim-airline` plugin are available at https://github.com/powerline/fonts
