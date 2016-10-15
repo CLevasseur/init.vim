@@ -6,15 +6,15 @@ My Neovim configuration file
 https://github.com/neovim/neovim/wiki/Installing-Neovim  
 
 2. Get this configuration file by cloning the repo in `~/.config/nvim`:
-```
-git clone git@github.com:CLevasseur/init.vim.git ~/.config/nvim
-```
+  ```
+  git clone git@github.com:CLevasseur/init.vim.git ~/.config/nvim
+  ```
 
 3. Add support for plugins using python:
-```
-pip2 install neovim  # python 2.X
-pip3 install neovim  # python 3.X
-```
+  ```
+  pip2 install neovim  # python 2.X
+  pip3 install neovim  # python 3.X
+  ```
 
 4. Powerline fonts are available at https://github.com/powerline/fonts
 
