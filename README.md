@@ -1,6 +1,17 @@
 # init.vim
 My Neovim configuration file
 
+# Install
+How to install Neovim: https://github.com/neovim/neovim/wiki/Installing-Neovim  
+
+Add supports for plugins using python:
+```
+pip2 install neovim  # python 2.X
+pip3 install neovim  # python 3.X
+```
+
+Powerline fonts are available at https://github.com/powerline/fonts
+
 # Plugins installed
 ```
 " Deoplete for autocompletion
