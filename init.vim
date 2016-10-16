@@ -29,7 +29,15 @@ set tabstop=4
 set shiftwidth=4
 " enable mouse
 set mouse=a
+" automatically wrap text as close to 100 characters
+set textwidth=100
 
+"""""""""""""""""""""""""""
+" Auto commands
+"""""""""""""""""""""""""""
+" remove blank characters at the end of every line when saving file, need to be disabled for some
+" filetypes like markdown or latex where trailing spaces are important
+autocmd FileType c,cpp,java,python,javascript autocmd BufWritePre <buffer> %s/\s\+$//e
 
 """""""""""""""""""""""""""
 " Basic Mappings
