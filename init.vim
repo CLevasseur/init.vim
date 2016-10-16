@@ -10,9 +10,9 @@ syntax enable
 " vim will try to use colors that look good on a dark background
 set background=dark
 " number of colors vim can use
-set t_Co=256
+"set t_Co=256
 " number of colors solarized colorscheme can use
-let g:solarized_termcolors=256
+"let g:solarized_termcolors=256
 " use solarized as colorscheme
 colorscheme solarized
 " display line number relatively to the current one
