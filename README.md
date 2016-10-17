@@ -16,6 +16,9 @@ https://github.com/neovim/neovim/wiki/Installing-Neovim
   pip3 install neovim  # python 3.X
   ```
 
+4. Install vim-plug:
+https://github.com/junegunn/vim-plug
+
 4. Install plugins
   ```
   $ vim
