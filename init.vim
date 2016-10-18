@@ -29,8 +29,8 @@ set tabstop=4
 set shiftwidth=4
 " enable mouse
 set mouse=a
-" automatically wrap text as close to 100 characters
-set textwidth=100
+" disable text wrapping
+set textwidth=0
 
 """""""""""""""""""""""""""
 " Auto commands
