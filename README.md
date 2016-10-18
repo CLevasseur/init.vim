@@ -7,7 +7,7 @@ https://github.com/neovim/neovim/wiki/Installing-Neovim
 
 2. Get this configuration file by cloning the repo in `~/.config/nvim`:
   ```
-  git clone git@github.com:CLevasseur/init.vim.git ~/.config/nvim
+  git clone https://github.com/CLevasseur/init.vim.git ~/.config/nvim
   ```
 
 3. Add support for plugins using python:
@@ -15,6 +15,9 @@ https://github.com/neovim/neovim/wiki/Installing-Neovim
   pip2 install neovim  # python 2.X
   pip3 install neovim  # python 3.X
   ```
+
+4. Install vim-plug:
+https://github.com/junegunn/vim-plug
 
 4. Install plugins
   ```
