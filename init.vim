@@ -49,6 +49,7 @@ map <C-L> :tabn<CR>
 map <C-H> :tabp<CR>
 map <C-B> :tab all<CR>
 
+map <C-S> :!python setup.py install<CR>
 
 """""""""""""""""""""""""""
 " Plugins
@@ -92,6 +93,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " display available markers
 Plug 'kshenoy/vim-signature'
+Plug 'tpope/vim-obsession', { 'do': 'vim -u NONE -c \"helptags vim-obsession/doc\" -c q' }
 
 "Plug 'git@github.com:Valloric/YouCompleteMe.git'
 
@@ -110,17 +112,17 @@ inoremap <expr><s-tab> pumvisible() ? "\<C-p>" : "\<TAB>"
 """""""""""""""""""""""""""
 " Unite
 """""""""""""""""""""""""""
-call unite#custom#source('file_rec/async', 'ignore_pattern', 'node_modules/')
+"call unite#custom#source('file,file/new,buffer,file_rec/async,line', 'ignore_pattern', 'build/')
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#filters#sorter_default#use(['sorter_rank'])
 call unite#custom#source('file,file/new,buffer,file_rec/async,line', 'matchers', 'matcher_fuzzy')
 
 " use ag silversearcher for search
 if executable('ag')
-  let g:unite_source_grep_command = 'ag'
-  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
-  let g:unite_source_grep_recursive_opt = ''
-  let g:unite_source_rec_async_command= 'ag --nocolor --nogroup --hidden -g ""'
+    let g:unite_source_grep_command = 'ag'
+    let g:unite_source_grep_default_opts = '--nocolor --nogroup --hidden'
+    let g:unite_source_rec_async_command = 'ag --nocolor --nogroup --hidden -g ""'
+    let g:unite_source_grep_recursive_opt=''
 endif
 
 " find a file matching pattern
@@ -128,6 +130,12 @@ nnoremap <C-F> :Unite grep:.<CR>
 " find pattern inside current buffer
 nnoremap <C-k> :<C-u>Unite -buffer-name=search -start-insert line<cr>
 
+
+"""""""""""""""""""""""""""
+" Ctrl P
+"""""""""""""""""""""""""""
+" exclude files in .gitignore
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 """""""""""""""""""""""""""
 " YouCompleteMe (not used anymore, replaced partly by deoplete)
@@ -142,6 +150,11 @@ nnoremap <C-k> :<C-u>Unite -buffer-name=search -start-insert line<cr>
 """""""""""""""""""""""""""
 map <Leader> <Plug>(easymotion-prefix)
 
+
+"""""""""""""""""""""""""""
+" Jedi
+"""""""""""""""""""""""""""
+let g:jedi#auto_close_doc = 0  " close scratch/preview window after completion
 
 """""""""""""""""""""""""""
 " NerdTree
