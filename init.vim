@@ -158,6 +158,12 @@ map <C-p> :FZF<CR>
 """""""""""""""""""""""""""
 map <Leader> <Plug>(easymotion-prefix)
 
+"""""""""""""""""""""""""""
+" Fugitive
+"""""""""""""""""""""""""""
+map <C-g>s :Gstatus<CR>
+map <C-g>c :Gcommit
+map <C-g>d :Gdiff<CR>
 
 """""""""""""""""""""""""""
 " Jedi
