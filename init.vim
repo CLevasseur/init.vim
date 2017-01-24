@@ -12,7 +12,7 @@ set background=dark
 " number of colors vim can use
 "set t_Co=256
 " number of colors solarized colorscheme can use
-"let g:solarized_termcolors=256
+let g:solarized_termcolors=256
 " use solarized as colorscheme
 colorscheme solarized
 " display line number relatively to the current one
@@ -64,12 +64,15 @@ Plug 'zchee/deoplete-jedi', { 'for': ['python'] }
 Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
 " File explorer
 Plug 'scrooloose/nerdtree'
-" File finder
-Plug 'kien/ctrlp.vim'
+" Fuzzy finder
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 " Quickly comment one or more lines
 Plug 'https://github.com/scrooloose/nerdcommenter.git'
 " See git additions/removal/updates not comitted yet
 Plug 'airblade/vim-gitgutter'
+"
+Plug 'https://github.com/tpope/vim-fugitive.git'  "'tpope/vim-fugitive.git'
 " Used to select pattern with multiple cursors
 Plug 'terryma/vim-multiple-cursors'
 " Go to character
@@ -135,7 +138,12 @@ nnoremap <C-k> :<C-u>Unite -buffer-name=search -start-insert line<cr>
 " Ctrl P
 """""""""""""""""""""""""""
 " exclude files in .gitignore
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+"let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
+"""""""""""""""""""""""""""
+" FZF
+"""""""""""""""""""""""""""
+map <C-p> :FZF<CR>
 
 """""""""""""""""""""""""""
 " YouCompleteMe (not used anymore, replaced partly by deoplete)
