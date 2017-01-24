@@ -164,6 +164,8 @@ map <Leader> <Plug>(easymotion-prefix)
 map <C-g>s :Gstatus<CR>
 map <C-g>c :Gcommit
 map <C-g>d :Gdiff<CR>
+map <C-g>p :Gpush<CR>
+map <C-g>g :Gpull<CR>
 
 """""""""""""""""""""""""""
 " Jedi
