@@ -36,56 +36,44 @@ https://github.com/junegunn/vim-plug
 # Plugins installed
 ```
 " Deoplete for autocompletion
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }  
-
-" Python completion integrated in deoplete  
-Plug 'zchee/deoplete-jedi', { 'for': ['python'] }  
-
-" Javascript completion integrated in deoplete  
-Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }  
-
-" File explorer  
-Plug 'scrooloose/nerdtree'  
-
-" File finder  
-Plug 'kien/ctrlp.vim'  
-
-" Quickly comment one or more lines  
-Plug 'https://github.com/scrooloose/nerdcommenter.git'  
-
-" See git additions/removal/updates not comitted yet  
-Plug 'airblade/vim-gitgutter'  
-
-" Used to select pattern with multiple cursors  
-Plug 'terryma/vim-multiple-cursors'  
-
-" Go to character  
-Plug 'easymotion/vim-easymotion'  
-
-" Syntax checker  
-Plug 'scrooloose/syntastic'  
-" Syntax checker to be used with syntastic for python  
-Plug 'nvie/vim-flake8'  
-
-" Solarized colorscheme  
-Plug 'altercation/vim-colors-solarized'  
-
-" Snippets  
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'  
-
-" Python related  
-Plug 'vim-scripts/indentpython.vim'  
-
-" Async execution library used by many plugins  
-Plug 'Shougo/vimproc.vim', {'do' : 'make'}  
-
-" Used to grep patterns across files  
-Plug 'https://github.com/Shougo/unite.vim.git'  
-
-" Status line  
-Plug 'vim-airline/vim-airline'  
-Plug 'vim-airline/vim-airline-themes'  
-
-" display available markers  
-Plug 'kshenoy/vim-signature'  
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Python completion integrated in deoplete
+Plug 'zchee/deoplete-jedi', { 'for': ['python'] }
+" Javascript completion integrated in deoplete
+Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
+" File explorer
+Plug 'scrooloose/nerdtree'
+" Fuzzy finder
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+" Quickly comment one or more lines
+Plug 'https://github.com/scrooloose/nerdcommenter.git'
+" See git additions/removal/updates not comitted yet
+Plug 'airblade/vim-gitgutter'
+"
+Plug 'https://github.com/tpope/vim-fugitive.git'  "'tpope/vim-fugitive.git'
+" Used to select pattern with multiple cursors
+Plug 'terryma/vim-multiple-cursors'
+" Go to character
+Plug 'easymotion/vim-easymotion'
+" Syntax checker
+Plug 'w0rp/ale'
+" Syntax checker to be used with syntastic for python
+Plug 'nvie/vim-flake8'
+" Solarized colorscheme
+Plug 'altercation/vim-colors-solarized'
+" Snippets
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+" Python related
+Plug 'vim-scripts/indentpython.vim'
+" Async execution library used by many plugins
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+" Used to grep patterns across files
+Plug 'https://github.com/Shougo/unite.vim.git'
+" Status line
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+" display available markers
+Plug 'kshenoy/vim-signature'
+Plug 'tpope/vim-obsession', { 'do': 'vim -u NONE -c \"helptags vim-obsession/doc\" -c q' }
 ```
