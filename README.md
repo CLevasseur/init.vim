@@ -19,19 +19,23 @@ https://github.com/neovim/neovim/wiki/Installing-Neovim
 4. Install vim-plug:
 https://github.com/junegunn/vim-plug
 
-4. Install plugins
+5. Install plugins
   ```
   $ vim
   :PlugInstall
   ```
 
-5. Symlink solarized colorscheme to `colors` folder: 
+6. Install solarized colorscheme for your terminal, on gnome in can be done by following the instructions at:
+https://github.com/Anthony25/gnome-terminal-colors-solarized
+
+
+7. Symlink solarized colorscheme to `colors` folder: 
   ```
   mkdir ~/.config/nvim/colors/
   ln -s ~/.config/nvim/plugged/vim-colors-solarized/colors/solarized.vim ~/.config/nvim/colors/
   ```  
 
-5. Powerline fonts used by `vim-airline` plugin are available at https://github.com/powerline/fonts
+8. Powerline fonts used by `vim-airline` plugin are available at https://powerline.readthedocs.io/en/master/installation.html#installation-on-various-platforms
 
 # Plugins installed
 ```
