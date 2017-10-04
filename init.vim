@@ -133,9 +133,9 @@ if executable('ag')
 endif
 
 " find a file matching pattern
-nnoremap <C-F> :Unite grep:.<CR>
+nnoremap <C-F> :Unite grep:.
 " find pattern inside current buffer
-nnoremap <C-i> :<C-u>Unite -buffer-name=search -start-insert line<cr>
+"nnoremap <C-i> :<C-u>Unite -buffer-name=search -start-insert line<cr>
 
 
 """""""""""""""""""""""""""
