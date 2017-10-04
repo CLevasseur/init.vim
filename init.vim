@@ -148,6 +148,8 @@ nnoremap <C-F> :Unite grep:.
 " FZF
 """""""""""""""""""""""""""
 map <C-p> :FZF<CR>
+map <C-u> :Buffers<CR>
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 """""""""""""""""""""""""""
 " YouCompleteMe (not used anymore, replaced partly by deoplete)
