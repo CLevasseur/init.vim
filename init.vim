@@ -168,7 +168,11 @@ map <Leader> <Plug>(easymotion-prefix)
 " Fugitive
 """""""""""""""""""""""""""
 map <C-g>s :Gstatus<CR>
+map <C-g>b :Gblame<CR>
 map <C-g>c :Gcommit
+map <C-g>h :Git checkout 
+map <C-g>r :Gread<CR>
+map <C-g>w :Gwrite<CR>
 map <C-g>d :Gdiff<CR>
 map <C-g>p :Gpush<CR>
 map <C-g>g :Gpull<CR>
