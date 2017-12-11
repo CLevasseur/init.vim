@@ -134,7 +134,7 @@ if executable('ag')
 endif
 
 " find a file matching pattern
-nnoremap <C-F> :Unite grep:.<CR>
+nnoremap <C-F> :Unite grep:.
 " find pattern inside current buffer
 "nnoremap <C-i> :<C-u>Unite -buffer-name=search -start-insert line<cr>
 
@@ -149,6 +149,8 @@ nnoremap <C-F> :Unite grep:.<CR>
 " FZF
 """""""""""""""""""""""""""
 map <C-p> :FZF<CR>
+map <C-u> :Buffers<CR>
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 """""""""""""""""""""""""""
 " YouCompleteMe (not used anymore, replaced partly by deoplete)
@@ -167,7 +169,11 @@ map <Leader> <Plug>(easymotion-prefix)
 " Fugitive
 """""""""""""""""""""""""""
 map <C-g>s :Gstatus<CR>
+map <C-g>b :Gblame<CR>
 map <C-g>c :Gcommit
+map <C-g>h :Git checkout 
+map <C-g>r :Gread<CR>
+map <C-g>w :Gwrite<CR>
 map <C-g>d :Gdiff<CR>
 map <C-g>p :Gpush<CR>
 map <C-g>g :Gpull<CR>
