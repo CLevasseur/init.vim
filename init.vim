@@ -1,9 +1,9 @@
 """""""""""""""""""""""""""
 " Basic Settings
 """""""""""""""""""""""""""
-"set nocompatible
-"filetype off
-"let &runtimepath.=',~/.config/nvim/plugged/ale'
+set nocompatible
+filetype off
+let &runtimepath.=',~/.config/nvim/plugged/ale'
 " turn filetype detection, indent scripts and filetype plugins on
 filetype plugin indent on
 
@@ -82,7 +82,8 @@ Plug 'terryma/vim-multiple-cursors'
 " Go to character
 Plug 'easymotion/vim-easymotion'
 " Syntax checker
-Plug 'w0rp/ale'
+Plug 'vim-syntastic/syntastic'
+"Plug 'w0rp/ale'
 " Syntax checker to be used with syntastic for python
 Plug 'nvie/vim-flake8'
 " Solarized colorscheme
@@ -135,7 +136,7 @@ endif
 " find a file matching pattern
 nnoremap <C-F> :Unite grep:.<CR>
 " find pattern inside current buffer
-nnoremap <C-i> :<C-u>Unite -buffer-name=search -start-insert line<cr>
+"nnoremap <C-i> :<C-u>Unite -buffer-name=search -start-insert line<cr>
 
 
 """""""""""""""""""""""""""
@@ -200,14 +201,17 @@ map <C-A> :NERDTreeToggle<CR>
 """""""""""""""""""""""""""
 " Syntastic (replaced by Ale)
 """""""""""""""""""""""""""
-"let g:syntastic_python_checkers = ['flake8']
-"let g:syntastic_python_flake8_args='--ignore=E501,E225'
+let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_python_flake8_args='--ignore=E501,E225'
 
 """""""""""""""""""""""""""
 " Ale
 """""""""""""""""""""""""""
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
+"nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+"nmap <silent> <C-j> <Plug>(ale_next_wrap)
+"let g:ale_linters = {
+"\   'python': ['pylint'],
+"\}
 
 """""""""""""""""""""""""""
 " Ultisnips
